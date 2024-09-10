@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <meta charset="UTF-8"/>
+        <title>My Portfolio</title>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <header>
+            <h1><a href="">Matthew Walton</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#about-me">About Me</a></li>
+                    <li>
+                        <a href="#my-projects">Projects</a>
+                        <!-- Dropdown Link to all Projects -->
+                        <ul>
+                            <li><a href="#se-projects">Software Engineering</a></li>
+                            <li><a href="#ml-projects">Machine Learning</a></li>
+                            <li><a href="#db-projects">Database Design</a></li>
+                            <li><a href="#algo-projects">Algorithm Design</a></li>
+                            <li><a href="#front-projects">Front-End</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#work-experience">Professional History</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Hero -->
+        <!-- Start with Initial Image of me, possible Rotation -->
+        <section class="hero">
+            <img src="./assets/images/S&M-1377.jpg" alt="">
+            <div class="hero-info">
+                <!-- Need more for this section, Possibly introduce a scroll feature?-->
+                <h3>Why should you hire me?</h3>
+                <p>My Elevator pitch</p>
+                <h3>My Skill Set</h3>
+                <!-- Table with Programming Langauge Skill Level -->
+                <table>
+                    <tr>
+                        <th>Programming Languages</th>
+                        <th>Proficiency</th>
+                    </tr>
+                    <tr>
+                        <td>C++</td>
+                        <td>Advanced</td>
+                    </tr>
+                    <tr>
+                        <td>Java</td>
+                        <td>Advanced</td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                        <td>Advanced</td>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td>Intermediate</td>
+                    </tr>
+                    <tr>
+                        <td>SQL</td>
+                        <td>Intermediate</td>
+                    </tr>
+                    <tr>
+                        <td>HTML, JavaScript, CSS</td>
+                        <td>Intermediate</td>
+                    </tr>
+                    <tr>
+                        <td>C#</td>
+                        <td>Novice</td>
+                    </tr>
+                </table>
+                <!-- Button for Modal Pop Up-->
+                <button class="btn-hire">Hire Now!</button>
+            </div>
+            
+            <!-- Possibly do a modal popup with Hire me Now Button -->
+            <div class="modal hidden" id="info">
+                <h2>Fill out the following information</h2>
+                <form>
+                    <label for="company-name">Company Name</label>
+                    <input type="text" placeholder="Company Name" class="form-input" />
+                    <button type="submit" class="btn-close">Close</button>
+                </form>
+            </div>
+        </section>
+        <!-- About Me -->
+        <section id="about-me" class="intro gradient-bottom-section">
+            <h2 class="section-title primary-border">About Me</h2>
+            <div id="am-card" class="project-type">
+                <p class="tab card-text">
+                    Matthew Walton is a skilled software developer with a robust set of programming skills. 
+                    He is proficient in multiple programming languages, including C++, Java, C, Python, SQL, HTML, JavaScript, CSS, and C#. With a solid foundation in both front-end and back-end development, 
+                    Matthew excels in creating efficient, scalable, and maintainable software solutions. 
+                    His diverse skill set allows him to tackle a wide range of technical challenges and contribute effectively to various aspects of software development projects.
+                </p>
+                <p class="tab card-text">
+                    Dedicated and versatile software developer known for his ability to adapt to different programming environments and technologies. 
+                    With extensive experience in languages such as C++, Java, C, Python, SQL, HTML, JavaScript, CSS, and C#, he brings a comprehensive approach to software development. Matthew’s expertise spans across full-stack development, enabling him to seamlessly integrate front-end and back-end systems. 
+                    His strong problem-solving skills and commitment to continuous learning make him an invaluable asset to any development team, consistently delivering high-quality software solutions.    
+                </p>   
+                </div>
+        </section>
+        <!-- Projects -->
+        <section id="my-projects" class="projects dark-section">
+            <div class="projects-holder">
+                <h2 class="section-title secondary-border">Projects</h2>
+                <!-- Software Engineering Projects -->
+                <div id="se-projects" class="se-div">
+                    <h3>Software Engineering</h3>
+                    <article class="project-desc">
+                        <!-- CARD -->
+                        <div class="card-el">
+                            <h4>Telemetric Data Interpreter</h4>
+                            <!-- <h5>Overview</h5> -->
+                            <p class="card-text">
+                                Work with the company SOFWERX to develop software that is a telemetric data interpreter for a digital twin drone.
+                                Software consisted of 10 user stories that were determined by a collaboration of the team and SOFWERX. 
+                                My role was director, designer, and developer of the project.
+                            </p>
+                            <!-- COMMENT OUT -- MAY NOT USE
+                            <h5>My Contributions</h5>
+                            <p class="tab card-text">
+                                As a director of the project, I was tasked with charging each member with their responsibilities; whether it was researching, designing, developing, or testing. 
+                                Furthermore, I provided leadership by assisting the team members with any difficulties they were facing. For instance, at the start of the project there were difficulties 
+                                connecting with SOFWERX. This led to me setting a meeting for our team and leading a conversation for the direction we wanted our project to go in.
+                            </p>
+                            <p class="tab card-text">
+                                As a designer of the project, I was tasked with designing how we recieved the data from our drone, what we could do with that data, and how that data would be used for the users benefit.
+                                Albeit the user stories were determined through collaboration, I designed the details and algorithms for our software to accomplish those user stories. 
+                                An example would be the design for the battery algorithm. This algorithm would take the rate of decay for each dataset recieved, and would predict how long the current battery will last. 
+                                However, this design had a major flaw; the prediction would greatly skew based on whether the drone was idling in the air, or accelerating in any direction. 
+                                In order to solve this issue, I designed the algorithm to analyze the data in larger instances. This allowed for a more accurate and steady reading of battery life.
+                            </p>
+                            <p class="tab card-text">
+                                As a developer, I was tasked with coding the design and testing the code. I developed a majority of the algorithms used in the back-end including: parsing through the data, simulation of data input, 
+                                determining weather conditions, and simulation of a sensor for object detection. Additionally, I developed the user-interface for the project. However, I was only able to develop 
+                                a command line interface due to time constraints with the project.
+                            </p>
+                            <h5>Learnings</h5>
+                            -->
+                        </div>
+                        <!-- CARD -->
+                        <div class="card-el">
+                            <h4>Trivia Game</h4>
+                            <p class="card-text">Description about this project</p>
+                        </div>
+                        <!-- CARD -->
+                        <div class="card-el">
+                            <h4>Deck of Cards Project</h4>
+                            <p class="card-text">Description about this project</p>
+                        </div>
+                    </article>
+                </div>
+                <!-- Machine Learning Projects -->
+                <div id="ml-projects" class="se-div">
+                    <h3>Machine Learning</h3>
+                    <div class="project-desc">
+                        <div class="card-el">
+                            <h4>Lung Module Research Study</h4>
+                            <!-- <h5>Overview</h5> -->
+                            <p class="card-text">
+                                Use Deep Learning models to predict if a lung module from an x-ray image would lead to cancer in 2 years. 
+                                My specific role in the research study was to use test-time augmentation to increase accuracy.
+                            </p>
+                        </div>
+                        <!-- <h5>How I did test-time augmentation</h5>
+                        <p class="tab card-text">
+                            First I would starting running all images through the model. Then I would check each image to see if it was correct. 
+                            If it was false, then I would use a heat-map to detect why the model in-correctly classified the image. Once I had a grid of the image 
+                            depicting the importance of each cell, I would 0 out the most important cell and run the image through the model again. 
+                            This technique would be repeated up to 16 times for each in-correctly classified image by the model.
+                        </p>
+                        <h5>Learnings?</h5>
+                        <p class="tab card-text"></p> -->
+                        <div class="card-el">
+                            <h4>Deep Learning model for Hand-Writing Recognition</h4>
+                            <!-- <h5>Overview</h5> -->
+                            <p class="card-text">
+                                I had to create a Deep Learning model to accurately predict hand-written images of numbers.
+                                I used the minst database for hand-written digits for this project.
+                            </p>
+                            <!-- <h5>Details</h5>
+                            <p class="tab card-text">
+                                After analyzing the hand-written images, I decided to perform data scaling on them. I scaled each images pixel value to be a color value by dividing each cell by 255. 
+                            </p> -->
+                        </div>
+                        <div class="card-el">
+                            <h4>Multiple Deep Learning models for water pouring accuracy with a Mechanical Arm</h4>
+                            <p class="card-text">Description about this project</p>
+                        </div>
+                        <div class="card-el">
+                            <h4>Independent Study Machine Learing Projects</h4>
+                            <p class="card-text">Description about this project</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Database Design Projects -->
+                <div id="db-projects" class="se-div">
+                    
+                    <h3>Database Design</h3>
+                    <div class="project-desc">
+                        <div class="card-el">
+                            <h4>Mobile University Database</h4>
+                            <p class="card-text">Description about this project</p>
+                        </div>
+                        <div class="card-el">
+                            <h4>Design a Database in Java</h4>
+                            <p class="card-text">Description about this project</p>
+                        </div>
+                        <div class="card-el">
+                            <h4>SQL statements to access a PostGre database</h4>
+                            <p class="card-text">Description about this project</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Algorithm Projects (Sorting/Data Structures) -->
+                <div id="algo-projects" class="se-div">
+                    <h3>Algorithmic Design</h3>
+                    <div class="project-desc">
+                        <div class="card-el">
+                            <h4>Sorting Algorithm Project</h4>
+                            <p class="card-text">Description about this project</p>
+                        </div>
+                        <div class="card-el">
+                            <h4>CoT final project</h4>
+                            <p class="card-text">Description about this project</p>
+                        </div>
+                        <div class="card-el">
+                            <h4>Data Structure Design</h4>
+                            <p class="card-text">Description about this project</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Front-End Coding Projects -->
+                <div id="front-projects" class="se-div">
+                    <h3>Front-End Development</h3>
+                    <div class="project-desc">
+                        <div class="card-el">
+                            <h4>Portfolio</h4>
+                            <p class="card-text">Description about this project</p>
+                        </div>
+                        <div class="card-el">
+                            <h4>Software Engineering Project</h4>
+                            <p class="card-text">Description about this project</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Work Experience -->
+        <section id="work-experience" class="prev-employment gradient-top-section">
+            <h2 class="section-title secondary-border">Professional History</h2>
+            <div class="employment employment-left">
+                <div class="employment-desc">
+                    <h3>Walton Brothers, LLC</h3>
+                    <h4>Company Owner</h4>
+                    <p class="employment-time">January 2022 - August 2023</p>
+                    <p class="tab">
+                        Results-Driven business owner that led a new construction company to generate over a 400% increase in revenue.
+                        Proven expertise in operational efficiency, strategic planning, and customer relationship management.
+                        Developed a program to track multiple data points, schedule, and handle company finances.
+                    </p>
+                </div>
+            </div>
+            <div class="employment employment-right">
+                <div class="employment-desc">
+                    <h3>Walton Brothers Concrete, Inc</h3>
+                    <h4>Concrete Foreman</h4>
+                    <p class="employment-time">May 2012 - December 2021</p>
+                    <p class="tab">
+                        Developed work related skills such as: teamwork, leadership, perseverance, ability to work under pressure, problem solving, and confidence.
+                        Responsible for conceptualizing concrete design, modifying the design to better suit the surroundings, overseeing and assisting in pouring concrete for residential homes and communities.
+                    </p>
+                </div>
+            </div>
+            <div class="employment employment-right">
+                <div class="employment-desc">
+                    <h3>James Hardie</h3>
+                    <h4>Clean-Up Crew</h4>
+                    <p class="employment-time">September 2013 - September 2014</p>
+                    <p class="tab">Description about this job</p>
+                </div>
+            </div>
+            <div class="employment employment-left">
+                <div class="employment-desc">
+                    <h3>Little Ceasars</h3>
+                    <h4>Crew Member</h4>
+                    <p class="employment-time">August 2013 - January 2014</p>
+                    <p class="tab">Description about this job</p>
+                </div>
+            </div>
+            <div class="employment employment-left">
+                <div class="employment-desc">
+                    <h3>Trinkle Center</h3>
+                    <h4>Event Administrator</h4>
+                    <p class="employment-time">January 2013 - January 2014</p>
+                    <p class="tab">Description about this job</p>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Make a possible Footer?-->
+        <footer>
+            <ul>
+                <li><a href="">Github</a></li>
+                <li><a href="">Linked In</a></li>
+                <li><a href="">Matthew2738@gmail.com</a></li>
+            </ul>
+        </footer>
+        <!-- JS for Modal Open and Close -->
+        <script>
+            const modal = document.querySelector(".modal");
+            const hireBtn = document.querySelector(".btn-hire");
+            const close_btn = document.querySelector(".btn-close");
+
+            // Download Resume Or Send an Email Or Pop Up Form to send to my email
+            const hireNow = function() { 
+                modal.classList.remove("hidden"); 
+            }; 
+            hireBtn.addEventListener("click", hireNow);
+            
+            // Close Modal
+            const close_modal = function() { 
+                modal.classList.add("hidden"); 
+            };
+            
+            close_btn.addEventListener("click", close_modal);
+        </script>
+    </body>
+</html>
