@@ -16,7 +16,10 @@ Light Gray: #dadbdc
 }
 /* Tab Class */
 .tab { text-indent: 40px; }
-
+.returnParam { color: blue; }
+.returnStatement { color: purple; }
+.dataType { color: teal; }
+.variable { color: lightblue; }
 /* Format Text in About Me */
 .intro p {
   font-size: 20px;
@@ -93,14 +96,14 @@ header nav ul li ul li:hover a{ color:#e06706; }
 }
 /* Format Hero Info */
 .hero-info {
-  color:#b35701;
-  background-color:#dadbdc;
+  color: #b35701;
+  /* background-color: #dadbdc; */
   padding: 20px;
-  width: 500px;
+  width: fit-content;
   border: solid 3px #b35701;
   position: absolute;
-  bottom: 20%;
-  right: 2%;
+  top: 20%;
+  left: 2%;
 }
 .hero-info h3 {
   text-align: center;
