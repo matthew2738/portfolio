@@ -127,8 +127,6 @@ header nav ul li ul li:hover a{ color:#e06706; }
 .hero img {
   width:100%;
   height:1000px;
-  object-fit:none;
-  object-position:80% 25%;
 }
 /* Format Hero Info */
 .hero-info {
