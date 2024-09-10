@@ -1,0 +1,366 @@
+/*
+-- Color Schematic with Codes --
+Brownish-Orange: #7f3800
+Burnt-Orange: #b35701
+Orange: #e06706
+Grayish-Blue: #3c4858
+Gray: #a9aaaf
+Light Gray: #dadbdc
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+/* Tab Class */
+.tab { text-indent: 40px; }
+
+/* Format Text in About Me */
+.intro p {
+  font-size: 20px;
+  color: #3c4858;
+  text-align: center;
+  padding: 10px 5%;
+  line-height: 1.4;
+  font-weight: 550;
+  -webkit-text-stroke-width: 0.25px;
+  -webkit-text-stroke-color: #3c4858;
+}
+
+/* Pad Nav Bar and Color Background */
+header {
+  padding: 10px 35px;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+/* Format My Name */
+header h1 {
+  font-weight: bold;
+  font-size: 24px;
+  color: #7f3800 ;
+  margin: 0;
+  display: inline;
+}
+/* Text Color for all links in Nav Bar */
+header a {
+  text-decoration: none;
+  color: white;
+}
+/* All Links Position Right */
+header nav { float: right; }
+header nav ul li { display: inline-block; }
+/* Format Text for all links */
+header nav ul li a {
+  margin: 0 30px;
+  font-weight: lighter;
+  font-size: 22px;
+}
+/* Hide and Position Project List */
+header nav ul li ul {
+  position: absolute;
+  width: 200px;
+  display: none;
+}
+/* Display Project List On Hover */
+header nav ul li:hover ul { display: block; }
+/* All list items in Project List Format */
+header nav ul li ul li {
+  background-color: #a9aaaf;
+  display: block;
+}
+/* Display all links in Project List */
+header nav ul li ul li a { 
+  display: block !important; 
+  font-size: 16px;
+}
+/* Format Background on hover */
+header nav ul li ul li:hover { background: #dadbdc; }
+header nav ul li ul li:hover a{ color:#e06706; }
+
+.contact-btn {
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: .75px solid white;
+  background: var(--main);
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: 1s;
+  box-sizing: border-box;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  text-wrap: nowrap;
+}
+
+.contact-btn:hover {
+  background: #000000;
+  /* box-shadow: #d6d6d6 0 10px 20px -10px; */
+  color:white;
+  transition: .5s;
+}
+
+
+/* Hero */
+.hero {
+  height: 1000px;
+  background-color:  #3c4858;
+  position: relative;
+}
+/* Format Image of me */
+.hero img {
+  width:100%;
+  height:1000px;
+  object-fit:none;
+  object-position:80% 25%;
+}
+/* Format Hero Info */
+.hero-info {
+  color:#b35701;
+  background-color:#dadbdc;
+  padding: 20px;
+  width: 500px;
+  border: solid 3px #b35701;
+  position: absolute;
+  bottom: 20%;
+  right: 2%;
+}
+.hero-info h3 {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+.info {
+  border: 1px solid black;
+  position: absolute;
+}
+table { width: 100%; }
+th {
+  font-size:16px;
+  font-weight:bold;
+}
+td {
+  text-align: center;
+  font-size: 14px;
+}
+th, td { padding:3px; }
+
+/* Format modal */
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 1.3rem;
+  min-height: 250px;
+  position: absolute;
+  top: 20%;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  z-index: 3;
+}
+
+/* Format different ions between dark and light */
+.section-title {
+  font-size: 55px;
+  color: #b35701;
+  margin-bottom: 35px;
+  padding: 40px 100px 20px 100px;
+  border-bottom: 3px solid;
+  display:inline-block;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+/* Light or Dark Under-Score for Section titles */
+.primary-border { border-color: #3c4858; }
+.secondary-border { border-color: #a9aaaf; }
+/* Background Variations */
+.dark-section {
+  text-align: center;
+  background-color: #3c4858;
+}
+.gradient-bottom-section {
+  text-align:center;
+  background-image: linear-gradient(to top, #3c4858, #a9aaaf);
+}
+.gradient-top-section {
+  text-align:center;
+  background-image: linear-gradient(to bottom, #3c4858, #a9aaaf);
+}
+
+#about-me {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+#am-card {
+  background-image: linear-gradient(#a9aaaf, #dadbdc);
+  border: solid 3px #b35701;
+  box-shadow: 0px 7px #7f3800;
+}
+.projects-holder {
+  background-color: #3c4858;
+  position: relative;
+  max-width: 80%;
+  left: 10%;
+  display: flex;
+  flex-direction: column;
+}
+/* Format Projects */
+.projects {
+  padding-bottom: 20px;
+  padding-top: 0px;
+}
+/* All Project Types get this */
+.project-type {
+  padding: 40px;
+  width:75%;
+  position: relative;
+  border-radius: 100px;
+  border: double 5px #b35701;
+  margin-bottom: 20px;
+}
+/* If project is left aligned */
+.project-left {
+  left:5%;
+  background-image: linear-gradient(to left, #a9aaaf, #dadbdc);
+  box-shadow: 7px 7px #7f3800;
+}
+/* If project is right aligned */
+.project-right {
+  left:20%;
+  background-image: linear-gradient(to right, #a9aaaf, #dadbdc);
+  box-shadow: -7px 7px #7f3800;
+}
+/* Format h3 in Projects */
+.projects h3 {
+  font-size: 40px;
+  color: #b35701;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+  font-weight:bold;
+}
+.se-div {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+/* Format Project cards*/
+.card-el {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid;
+  max-width: 400px;
+  min-width: 400px;
+  min-height: 300px;
+  border-radius: 20px;
+  padding: 35px 30px 0px 30px;
+  margin-bottom: 30px;
+  background-image: linear-gradient(to left, #a9aaaf, #dadbdc);
+  box-shadow: 7px 7px #7f3800;
+}
+.card-text {
+  text-align: center;
+}
+/* Format h4 in Projects */
+.projects h4 {
+  color: #b35701;
+  font-size: 22px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  -webkit-text-stroke-width: 0.25px;
+  letter-spacing: 0.5px;
+}
+.projects h5 {
+  color:#3c4858;
+  font-size:16px;
+  font-weight:bold;
+}
+/* Format the paragraph text */
+.project-desc {
+  color:#3c4858;
+  font-size: 16px;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 30px;
+  flex-wrap: wrap;
+}
+.project-desc p {
+  padding:10px;
+}
+/* Format Employment */
+.employment {
+  width: 100%;
+  padding-bottom:10px;
+  position: relative;
+}
+
+.employment h3 {
+  color:#b35701;
+  font-size:32px;
+  font-weight:bold;
+  padding-left: 1%;
+}
+.employment h4 {
+  color:#e06706;
+  font-size:22px;
+  padding-top:20px;
+  padding-bottom:10px;
+  padding-left: 2%;
+  text-indent:20px;
+}
+.employment-time{
+  position:absolute;
+  text-align:right;
+  right:10%;
+  top:40px;
+  font-size:32px;
+  color:#b35701;
+}
+.employment-desc {
+  color:#dadbdc;
+  font-size:16px;
+  text-align:left;
+}
+.employment-desc p {
+  width: 50%;
+  padding-left: 3%;
+}
+footer {
+  background-color: #a9aaaf;
+  width:100%;
+  padding-top:10px;
+  text-align:center;
+}
+footer ul li {
+  display:inline-block;
+}
+footer ul li a{
+  color:#7f3800;
+  text-decoration:none;
+  margin-right: 100px;
+  font-size:22px;
+  font-weight:lighter;
+}
+.hidden { display: none; }
