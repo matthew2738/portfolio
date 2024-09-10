@@ -16,10 +16,8 @@ Light Gray: #dadbdc
 }
 /* Tab Class */
 .tab { text-indent: 40px; }
-.returnParam { color: blue; }
-.returnStatement { color: purple; }
-.dataType { color: teal; }
-.variable { color: lightblue; }
+.doubleTab { text-indent: 80px; }
+
 /* Format Text in About Me */
 .intro p {
   font-size: 20px;
