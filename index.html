@@ -34,22 +34,24 @@
         <!-- Hero -->
         <!-- Start with Initial Image of me, possible Rotation -->
         <section class="hero">
-            <img src="./assets/images/img_moutain_blkwht.jpg" alt="">
-            <div class="hero-info">
+            <img class="hero-bg" src="./assets/images/img_geometry_1.jpg" alt="">
+            <div class="hero-border"><div class="hero-info">
                 
                 <!-- Design like writing code that describes yourself -->
-                <p>def main():</p>
-                <br>
-                <p class="tab">proficient_languages = { C, C++, Java, Python, SQL, HTML, CSS }</p>
-                <br>
-                <p class="tab">Specialities[CS_Areas???] = { Data Science, Data Analytics, Software Development, Web Development, Game Design }</p>
-                <br>
-                <p class="tab">what_you_need = qualified(proficient_languages, Specialities, Experience)</p>
-                <br>
-                <p class="tab">if (what_you_need)</p>
-                <br>
-                <p class="doubleTab">print("Contact Me!")</p>
-               
+                <p>def main():</p><br>
+                <p class="tab">proficient_languages = { "C", "C++"", "Java", "Python", "SQL", "HTML", "CSS" }</p><br>
+                <p class="tab">interests = { "Data Science", "Data Analytics", "Software Development", "Web Development", "Game Design" }</p><br>
+                <p class="tab">experience = { "Data Annotations", "Owner of Walton Brothers, LLC", "Concrete Foreman" }</p><br>
+                <p class="tab">great_candidate = qualified(proficient_languages, interests, experience)</p><br>
+                <p class="tab">if (great_candidate)</p>
+                <p class="doubleTab">print("Contact Me!")</p><br><br>
+                <p>if __name__ == '__main__':</p>
+                <p class="tab">main()</p>
+            </div></div>
+            <div class="headshot">
+                <img class="headshot-img" src="./assets/images/S&M-1377.jpg" alt="">
+            </div>
+            
             <!-- Possibly do a modal popup with Hire me Now Button -->
             <div class="modal hidden" id="info">
                 <h2>Fill out the following information</h2>
@@ -59,11 +61,12 @@
                     <button type="submit" class="btn-close">Close</button>
                 </form>
             </div>
+            
         </section>
         <!-- About Me -->
         <section id="about-me" class="intro gradient-bottom-section">
-            <h2 class="section-title primary-border">About Me</h2>
-            <div id="am-card" class="project-type">
+            <h2 class="section-title">About Me</h2>
+            <div class="project-type"><div id="am-card">
                 <p class="tab card-text">
                     Matthew Walton is a skilled software developer with a robust set of programming skills. 
                     He is proficient in multiple programming languages, including C++, Java, C, Python, SQL, HTML, JavaScript, CSS, and C#. With a solid foundation in both front-end and back-end development, 
@@ -75,12 +78,12 @@
                     With extensive experience in languages such as C++, Java, C, Python, SQL, HTML, JavaScript, CSS, and C#, he brings a comprehensive approach to software development. Matthew’s expertise spans across full-stack development, enabling him to seamlessly integrate front-end and back-end systems. 
                     His strong problem-solving skills and commitment to continuous learning make him an invaluable asset to any development team, consistently delivering high-quality software solutions.    
                 </p>   
-                </div>
+                </div></div>
         </section>
         <!-- Projects -->
         <section id="my-projects" class="projects dark-section">
             <div class="projects-holder">
-                <h2 class="section-title secondary-border">Projects</h2>
+                <div><h2 class="section-title">Projects</h2></div>
                 <!-- Software Engineering Projects -->
                 <div id="se-projects" class="se-div">
                     <h3>Software Engineering</h3>
@@ -225,56 +228,68 @@
             </div>
         </section>
         <!-- Work Experience -->
-        <section id="work-experience" class="prev-employment gradient-top-section">
-            <h2 class="section-title secondary-border">Professional History</h2>
-            <div class="employment employment-left">
+        <!-- <section id="work-experience" class="prev-employment gradient-top-section">
+            <h2 class="section-title">Professional History</h2>
+            <div class="projects-holder">
+            <div class="employment">
                 <div class="employment-desc">
-                    <h3>Walton Brothers, LLC</h3>
+                    <div class="title-time-div">
+                        <h3>Walton Brothers, LLC</h3>
+                        <p class="employment-time">January 2022 - August 2023</p>
+                    </div>
                     <h4>Company Owner</h4>
-                    <p class="employment-time">January 2022 - August 2023</p>
                     <p class="tab">
                         Results-Driven business owner that led a new construction company to generate over a 400% increase in revenue.
                         Proven expertise in operational efficiency, strategic planning, and customer relationship management.
                         Developed a program to track multiple data points, schedule, and handle company finances.
                     </p>
-                </div>
+                </div> 
             </div>
-            <div class="employment employment-right">
+            <div class="employment">
                 <div class="employment-desc">
-                    <h3>Walton Brothers Concrete, Inc</h3>
+                    <div class="title-time-div">
+                        <h3>Walton Brothers Concrete, Inc</h3>
+                        <p class="employment-time">May 2012 - December 2021</p>
+                    </div>
                     <h4>Concrete Foreman</h4>
-                    <p class="employment-time">May 2012 - December 2021</p>
                     <p class="tab">
                         Developed work related skills such as: teamwork, leadership, perseverance, ability to work under pressure, problem solving, and confidence.
                         Responsible for conceptualizing concrete design, modifying the design to better suit the surroundings, overseeing and assisting in pouring concrete for residential homes and communities.
                     </p>
                 </div>
             </div>
-            <div class="employment employment-right">
+            <div class="employment">
                 <div class="employment-desc">
-                    <h3>James Hardie</h3>
+                    <div class="title-time-div">
+                        <h3>James Hardie</h3>
+                        <p class="employment-time">September 2013 - September 2014</p>
+                    </div>
                     <h4>Clean-Up Crew</h4>
-                    <p class="employment-time">September 2013 - September 2014</p>
                     <p class="tab">Description about this job</p>
                 </div>
             </div>
-            <div class="employment employment-left">
+            <div class="employment">
                 <div class="employment-desc">
-                    <h3>Little Ceasars</h3>
+                    <div class="title-time-div">
+                        <h3>Little Ceasars</h3>
+                        <p class="employment-time">August 2013 - January 2014</p>
+                    </div>
                     <h4>Crew Member</h4>
-                    <p class="employment-time">August 2013 - January 2014</p>
                     <p class="tab">Description about this job</p>
                 </div>
             </div>
-            <div class="employment employment-left">
+            <div class="employment">
                 <div class="employment-desc">
-                    <h3>Trinkle Center</h3>
+                    <div class="title-time-div">
+                        <h3>Trinkle Center</h3>
+                        <p class="employment-time">January 2013 - January 2014</p>
+                    </div>
                     <h4>Event Administrator</h4>
-                    <p class="employment-time">January 2013 - January 2014</p>
                     <p class="tab">Description about this job</p>
                 </div>
             </div>
-        </section>
+        </div>
+        </section> -->
         <!-- Contact Make a possible Footer?-->
         <footer>
             <ul>

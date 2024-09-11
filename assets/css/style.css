@@ -21,18 +21,18 @@ Light Gray: #dadbdc
 /* Format Text in About Me */
 .intro p {
   font-size: 20px;
-  color: #3c4858;
+  color: #F0F2F5;
   text-align: center;
   padding: 10px 5%;
   line-height: 1.4;
-  font-weight: 550;
-  -webkit-text-stroke-width: 0.25px;
-  -webkit-text-stroke-color: #3c4858;
+  font-weight: 500;
+  -webkit-text-stroke-width: 0.15px;
+  -webkit-text-stroke-color: #F0F2F5;
 }
 
 /* Pad Nav Bar and Color Background */
 header {
-  padding: 10px 35px;
+  padding: 10px 120px;
   position: absolute;
   top: 0;
   z-index: 2;
@@ -44,15 +44,16 @@ header {
 header h1 {
   font-weight: bold;
   font-size: 24px;
-  color: #7f3800 ;
+  color: black ;
   margin: 0;
   display: inline;
 }
 /* Text Color for all links in Nav Bar */
 header a {
   text-decoration: none;
-  color: #00043c;
+  color: #222;
   font-size: 30px;
+  opacity: .75;
 }
 /* All Links Position Right */
 header nav { float: right; }
@@ -88,9 +89,9 @@ header nav ul li ul li:hover a{ color:#e06706; }
 .contact-btn {
   padding: 4px 12px;
   border-radius: 999px;
-  border: .75px solid #00043c;
+  border: .75px solid black;
   background: var(--main);
-  color: #00043c;
+  color: black;
   cursor: pointer;
   transition: 1s;
   box-sizing: border-box;
@@ -109,34 +110,52 @@ header nav ul li ul li:hover a{ color:#e06706; }
 }
 
 .contact-btn:hover {
-  background: #000000;
-  /* box-shadow: #d6d6d6 0 10px 20px -10px; */
-  color:white;
+  background: #222;
+  color: white;
+  opacity: .75;
   transition: .5s;
 }
 
 
 /* Hero */
 .hero {
-  background-color: #3c4858;
+  /* background: linear-gradient(30deg, rgba(185,212,207,1) 0%, rgba(17,153,158,1) 50%, rgba(228,249,245,1) 80%); */
+  background: linear-gradient(30deg, rgba(215, 208, 192, 1) 30%, rgba(244, 240, 235, 1) 60%, rgba(199, 192, 184, 1) 90%);
   position: relative;
 }
 /* Format Image of me */
-.hero img {
+.hero-bg {
   width: 100%;
   height: 929px;
 }
-/* Format Hero Info */
-.hero-info {
-  color: #00043c;
-  /* background-color: #dadbdc; */
-  padding: 20px;
+.hero-border {
+  padding: 3px;
   width: fit-content;
-  border: solid 3px #00043c;
   position: absolute;
   top: 20%;
+  right: 2%;
+}
+/* Format Hero Info */
+.hero-info {
+  padding: 20px;
+  border-radius: 20px;
+  background: #222;
+  opacity: 0.85;
+  color: white;
+}
+.headshot {
+  position: absolute;
+  top: 16.5%;
   left: 2%;
 }
+.headshot-img {
+  object-fit: cover;
+  width: 400px;
+  height: 400px;
+  border-radius: 15px;
+  opacity: 0.9;
+}
+
 .hero-info h3 {
   text-align: center;
   font-size: 22px;
@@ -176,29 +195,27 @@ th, td { padding:3px; }
 /* Format different ions between dark and light */
 .section-title {
   font-size: 55px;
-  color: #b35701;
+  color: white;
   margin-bottom: 35px;
   padding: 40px 100px 20px 100px;
   border-bottom: 3px solid;
-  display:inline-block;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
+  display: inline-block;
 }
 /* Light or Dark Under-Score for Section titles */
-.primary-border { border-color: #3c4858; }
+.primary-border { border-color: #77E4C8; }
 .secondary-border { border-color: #a9aaaf; }
 /* Background Variations */
 .dark-section {
   text-align: center;
-  background-color: #3c4858;
+  background-color: #728b90;
 }
 .gradient-bottom-section {
   text-align:center;
-  background-image: linear-gradient(to top, #3c4858, #a9aaaf);
+  /* background-image: linear-gradient(to top, #3c4858, #a9aaaf); */
 }
 .gradient-top-section {
-  text-align:center;
-  background-image: linear-gradient(to bottom, #3c4858, #a9aaaf);
+  text-align: center;
+  background: #728b90;
 }
 
 #about-me {
@@ -207,14 +224,19 @@ th, td { padding:3px; }
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  background: #728b90;
 }
 #am-card {
-  background-image: linear-gradient(#a9aaaf, #dadbdc);
+  /* background-image: linear-gradient(#a9aaaf, #dadbdc);
   border: solid 3px #b35701;
-  box-shadow: 0px 7px #7f3800;
+  box-shadow: 0px 7px #7f3800; */
+  padding: 20px;
+  border-radius: 20px;
+  background: #222;
+  opacity: 0.85;
+  color: white;
 }
 .projects-holder {
-  background-color: #3c4858;
   position: relative;
   max-width: 80%;
   left: 10%;
@@ -228,13 +250,16 @@ th, td { padding:3px; }
 }
 /* All Project Types get this */
 .project-type {
-  padding: 40px;
+  /* padding: 40px;
   width:75%;
   position: relative;
   border-radius: 100px;
   border: double 5px #b35701;
-  margin-bottom: 20px;
+  margin-bottom: 20px; */
+  padding: 3px;
+  width: 75%;
 }
+
 /* If project is left aligned */
 .project-left {
   left:5%;
@@ -250,12 +275,12 @@ th, td { padding:3px; }
 /* Format h3 in Projects */
 .projects h3 {
   font-size: 40px;
-  color: #b35701;
+  color: white;
   margin-top: 50px;
   margin-bottom: 15px;
   -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: black;
-  font-weight:bold;
+  font-weight: bold;
 }
 .se-div {
   display: flex;
@@ -267,22 +292,23 @@ th, td { padding:3px; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid;
   max-width: 400px;
   min-width: 400px;
   min-height: 300px;
-  border-radius: 20px;
-  padding: 35px 30px 0px 30px;
   margin-bottom: 30px;
-  background-image: linear-gradient(to left, #a9aaaf, #dadbdc);
-  box-shadow: 7px 7px #7f3800;
+  padding: 20px;
+  border-radius: 20px;
+  background: #222;
+  opacity: 0.85;
+  color: white;
 }
 .card-text {
   text-align: center;
 }
 /* Format h4 in Projects */
 .projects h4 {
-  color: #b35701;
+  color: white;
+  border-bottom: .5px solid;
   font-size: 22px;
   padding-top: 20px;
   padding-bottom: 10px;
@@ -310,53 +336,76 @@ th, td { padding:3px; }
 }
 /* Format Employment */
 .employment {
-  width: 100%;
-  padding-bottom:10px;
+  padding-bottom: 50px;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .employment h3 {
-  color:#b35701;
-  font-size:32px;
-  font-weight:bold;
-  padding-left: 1%;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 2%;
+  position: absolute;
+  top: 10%;
 }
 .employment h4 {
-  color:#e06706;
-  font-size:22px;
-  padding-top:20px;
-  padding-bottom:10px;
+  color: white;
+  font-size: 22px;
+  padding-top: 20px;
+  padding-bottom: 10px;
   padding-left: 2%;
-  text-indent:20px;
+  text-align: left;
 }
 .employment-time{
-  position:absolute;
-  text-align:right;
-  right:10%;
-  top:40px;
-  font-size:32px;
-  color:#b35701;
+  position: absolute;
+  text-align: right;
+  left: 70%;
+  top: 10%;
+  font-size: 24px;
+  color: white;
+}
+.employment-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  min-width: 400px;
+  min-height: 300px;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 20px;
+  background: #222;
+  opacity: 0.85;
+  color: white;
 }
 .employment-desc {
-  color:#dadbdc;
-  font-size:16px;
-  text-align:left;
+  padding: 50px;
+  border-radius: 20px;
+  background: #222;
+  opacity: 0.85;
+  color: white;
+}
+.title-time-div {
+  padding-bottom: 10px;
 }
 .employment-desc p {
-  width: 50%;
-  padding-left: 3%;
+  padding: 10px;
 }
+
 footer {
-  background-color: #a9aaaf;
-  width:100%;
-  padding-top:10px;
-  text-align:center;
+  background-color: #728b90;
+  width: 100%;
+  padding-top: 10px;
+  text-align: center;
 }
 footer ul li {
   display:inline-block;
 }
 footer ul li a{
-  color:#7f3800;
+  color: white;
   text-decoration:none;
   margin-right: 100px;
   font-size:22px;
