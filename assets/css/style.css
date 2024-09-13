@@ -114,8 +114,8 @@ img {
 .hero .grid {
   position: relative;
   top: 100px;
-  grid-template-columns: 30% 70%;
-  gap: 100px;
+  /* grid-template-columns: 30% 70%; */
+  gap: 30px;
 }
 
 .hero .card {
@@ -125,18 +125,18 @@ img {
 /* About me */
 .about-me .card {
   position: relative;
-  max-width: 400px;
+  max-width: auto;
   animation: slideInFromLeft 1s ease-in;
 }
 
 .headshot-img {
   position: absolute;
-  left: -15%;
+  left: -10%;
   top: -18%;
   object-fit: cover;
-  width: 200px;
-  height: 200px;
-  border-radius: 100px;
+  width: 220px;
+  height: 220px;
+  border-radius: 200px;
   box-shadow: 0 3px 10px rgba(218, 219, 220, 0.931);
   animation: slideInFromTop 1s ease-in;
 }
@@ -144,7 +144,7 @@ img {
 .about-me h2 {
   font-size: 24px;
   margin-bottom: 35px;
-  padding: 40px 10px 20px 10px;
+  padding: 40px 10px 10px 10px;
   border-bottom: 3px solid;
   width: fit-content;
   margin-inline: auto;
@@ -175,7 +175,7 @@ img {
 }
 
 .project .container {
-  padding: 150px 0px 20px 0px;
+  padding: 200px 0px 20px 0px;
   overflow: hidden;
   animation: slideInFromBottom 1s ease-in;
 }
@@ -395,19 +395,16 @@ img {
 /* Fix overlap on smaller screens */
 @media (max-width: 1200px) {
   .navbar {
-    height: 125px;
+    height: 120px;
   }
 
   .navbar .flex {
     flex-direction: column;
+    justify-content: center;
   }
 
   .navbar ul {
     padding: 10px;
-  }
-
-  .navbar a:hover {
-    overflow: visible;
   }
 
   .grid,
@@ -421,6 +418,13 @@ img {
 
   .about-me {
     justify-self: center;
+    margin-top: 20px;
+  }
+
+  .headshot-img {
+    width: 200px;
+    height: 200px;
+    top: -15%;
   }
   
   .hero .card {
@@ -445,6 +449,10 @@ img {
     flex-direction: column;
   }
 
+  .project .container {
+    justify-content: center;
+  }
+
   .project h2 {
     font-size: 60px;
     padding: 10px;
@@ -455,7 +463,6 @@ img {
 
   .project .card {
     min-width: auto;
-    height: auto;
     margin: 0px;
     text-align: center;
   }
