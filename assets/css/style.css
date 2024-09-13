@@ -114,14 +114,46 @@ img {
 .hero .grid {
   position: relative;
   top: 100px;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 30% 70%;
   gap: 100px;
 }
 
-/* Format Skill Set Info */
 .hero .card {
-  width: fit-content;
   background-color: var(--light-gray);
+}
+
+/* About me */
+.about-me .card {
+  position: relative;
+  max-width: 400px;
+  animation: slideInFromLeft 1s ease-in;
+}
+
+.headshot-img {
+  position: absolute;
+  left: -15%;
+  top: -18%;
+  object-fit: cover;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  box-shadow: 0 3px 10px rgba(218, 219, 220, 0.931);
+  animation: slideInFromTop 1s ease-in;
+}
+
+.about-me h2 {
+  font-size: 24px;
+  margin-bottom: 35px;
+  padding: 40px 10px 20px 10px;
+  border-bottom: 3px solid;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+/* Format Skill Set Info */
+.skill-set .card {
+  width: fit-content;
+  animation: slideInFromRight 1s ease-in;
 }
 
 .hero h2 {
@@ -137,33 +169,6 @@ img {
   text-align: center;
 }
 
-/* About me */
-.headshot-img {
-  position: absolute;
-  left: -15%;
-  top: -18%;
-  object-fit: cover;
-  width: 200px;
-  height: 200px;
-  border-radius: 100px;
-  box-shadow: 0 3px 10px rgba(218, 219, 220, 0.931);
-}
-
-/* Need to refactor to card class */
-.about-me .card {
-  position: relative;
-  max-width: 400px;
-}
-
-.about-me h2 {
-  font-size: 24px;
-  margin-bottom: 35px;
-  padding: 40px 10px 20px 10px;
-  border-bottom: 3px solid;
-  width: fit-content;
-  margin-inline: auto;
-}
-
 /* Project Section */
 .project {
   background-color: var(--light-gray);
@@ -172,6 +177,7 @@ img {
 .project .container {
   padding: 150px 0px 20px 0px;
   overflow: hidden;
+  animation: slideInFromBottom 1s ease-in;
 }
 
 /* Projects title */
@@ -323,11 +329,6 @@ img {
   animation-duration: 1.5s;
 }
 
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
 /* Single Tab */
 .tab { 
   text-indent: 40px; 
@@ -336,4 +337,126 @@ img {
 /* Double Tab */
 .doubleTab { 
   text-indent: 80px; 
+}
+
+/* Animations */
+@keyframes fade {
+  0% {
+    opacity: .0
+  }
+  
+  100% {
+    opacity: 1
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Fix overlap on smaller screens */
+@media (max-width: 1200px) {
+  .navbar {
+    height: 125px;
+  }
+
+  .navbar .flex {
+    flex-direction: column;
+  }
+
+  .navbar ul {
+    padding: 10px;
+  }
+
+  .navbar a:hover {
+    overflow: visible;
+  }
+
+  .grid,
+  .hero .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    height: auto;
+  }
+
+  .about-me {
+    justify-self: center;
+  }
+  
+  .hero .card {
+    margin-left: 0px;
+    width: auto;
+    justify-content: center;
+  }
+
+  .about-me .card {
+    animation: slideInFromTop 1s ease-in;
+  }
+
+  .skill-set .card {
+    animation: slideInFromLeft 1s ease-in;
+  }
+
+  .project {
+    height: auto;
+  }
+
+  .project .flex {
+    flex-direction: column;
+  }
+
+  .project h2 {
+    font-size: 60px;
+    padding: 10px;
+    margin-bottom: 25px;
+    border-right: none;
+    -webkit-text-stroke: 0.15px;
+  }
+
+  .project .card {
+    min-width: auto;
+    height: auto;
+    margin: 0px;
+    text-align: center;
+  }
 }
