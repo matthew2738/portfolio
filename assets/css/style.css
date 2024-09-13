@@ -27,7 +27,7 @@ Light Gray: #dadbdc
 }
 
 p {
-  color: var(--light-gray);
+  color: var(--gray-blue);
   font-size: 16px;
   font-weight:500;
   -webkit-text-stroke-width: 0.15px;
@@ -101,7 +101,8 @@ img {
 
 /* Links when hovered will have a solid line appear */
 .navbar a:hover {
-  border-bottom: 2px var(--light-gray) solid;
+  color: var(--orange);
+  border-bottom: 2px var(--burnt-orange) solid;
 }
 
 /* Hero */
@@ -120,6 +121,15 @@ img {
 /* Format Skill Set Info */
 .hero .card {
   width: fit-content;
+  background-color: var(--light-gray);
+}
+
+.hero h2 {
+  color: var(--gray-blue);
+}
+
+.hero .list-item {
+  color: var(--brown-orange);
 }
 
 .btn-wrapper {
@@ -136,7 +146,7 @@ img {
   width: 200px;
   height: 200px;
   border-radius: 100px;
-  box-shadow: 0 3px 10px rgba(234, 103, 15, 0.931);
+  box-shadow: 0 3px 10px rgba(218, 219, 220, 0.931);
 }
 
 /* Need to refactor to card class */
@@ -181,6 +191,7 @@ img {
   width: 600px;
   position: relative;
   margin-left: 100px;
+  background-color: var(--gray-blue);
 }
 
 /* Hide the images by default */
@@ -222,7 +233,7 @@ img {
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: white;
+  color: var(--light-gray);
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -243,7 +254,7 @@ img {
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, 
 .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(54, 53, 53,0.8);
 }
 
 /* Utilities */

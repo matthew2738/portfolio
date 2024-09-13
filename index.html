@@ -30,17 +30,37 @@
                     <h2>My_Skill_Set.py</h2>
                     <!-- Design like writing code that describes yourself -->
                     <p>def load_attributes() -> Person</p><br>
-                    <p class="tab">proficient_languages = { "C", "C++"", "Java", "Python", "SQL", "HTML", "CSS" }</p><br>
-                    <p class="tab">interests = { "Data Science", "Data Analytics", "Software Development", "Web Development", "Game Design" }</p><br>
-                    <p class="tab">experience = { "Data Annotations", "Owner of Walton Brothers, LLC", "Concrete Foreman" }</p><br>
+                    <p class="tab">proficient_languages = { 
+                        <span class="list-item">"C"</span>, 
+                        <span class="list-item">"C++"</span>, 
+                        <span class="list-item">"Java"</span>, 
+                        <span class="list-item">"Python"</span>, 
+                        <span class="list-item">"SQL"</span>, 
+                        <span class="list-item">"HTML"</span>, 
+                        <span class="list-item">"CSS"</span> }
+                    </p><br>
+                    <p class="tab">interests = { 
+                        <span class="list-item">"Data Science"</span>, 
+                        <span class="list-item">"Data Analytics"</span>, 
+                        <span class="list-item">"Software Development"</span>, 
+                        <span class="list-item">"Game Design"</span>, 
+                        <span class="list-item">"Web Development"</span> }
+                    </p><br>
+                    <p class="tab">experience = { 
+                        <span class="list-item">"Data Annotations"</span>, 
+                        <span class="list-item">"Owner of Walton Brothers, LLC"</span>, 
+                        <span class="list-item">"Concrete Foreman"</span> }
+                    </p><br>
                     <p class="tab">return Person(proficient_languages, interests, experience)</p><br>
                     <br>
                     <p>def main():</p><br>
                     <p class="tab">matthew_walton = load_attributes()</p><br>
                     <p class="tab">great_candidate = qualified(matthew_walton, position)</p><br>
                     <p class="tab">if (great_candidate)</p>
-                    <p class="doubleTab">print("Contact Me!")</p><br><br>
-                    
+                    <p class="doubleTab">
+                        print(<span class="list-item">"Contact Me!"</span>)
+                    </p>
+                    <br><br>
                     <p>if __name__ == '__main__':</p>
                     <p class="tab">main()</p>
                     <div class="btn-wrapper"><button class="btn">Run</button></div>               
